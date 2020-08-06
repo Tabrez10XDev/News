@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/breaking">
+
+    <fragment
+        android:id="@+id/breaking"
+        android:name="com.example.news.Frags.Breaking"
+        android:label="fragment_breaking"
+        tools:layout="@layout/fragment_breaking" />
+    <fragment
+        android:id="@+id/saved"
+        android:name="com.example.news.Frags.Saved"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.news.Frags.Search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+</navigation>
