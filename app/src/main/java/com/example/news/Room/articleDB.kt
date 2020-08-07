@@ -11,7 +11,6 @@ import androidx.room.RoomDatabase
 )
 abstract class articleDB : RoomDatabase() {
 abstract fun getArticle():articleDAO
-    abstract fun upsertArticle():articleDAO
     companion object{
         private var instance : articleDB?= null
         val lock = Any()

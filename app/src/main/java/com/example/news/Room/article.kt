@@ -7,7 +7,10 @@ import androidx.room.PrimaryKey
     tableName = "articles"
 )
 data class article(
-    @PrimaryKey(autoGenerate = true)
-    var id: Int,
+
     var name:String
-)
+
+){
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0
+}
