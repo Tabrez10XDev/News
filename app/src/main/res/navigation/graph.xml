@@ -9,15 +9,32 @@
         android:id="@+id/breaking"
         android:name="com.example.news.Frags.Breaking"
         android:label="fragment_breaking"
-        tools:layout="@layout/fragment_breaking" />
+        tools:layout="@layout/fragment_breaking" >
+        <action
+            android:id="@+id/action_breaking_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/saved"
         android:name="com.example.news.Frags.Saved"
         android:label="fragment_saved"
-        tools:layout="@layout/fragment_saved" />
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_saved_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/search"
         android:name="com.example.news.Frags.Search"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.news.Frags.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" />
 </navigation>
