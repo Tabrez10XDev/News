@@ -33,7 +33,6 @@ class NewsAdapter :RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
         return ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_article_preview,parent,false ))
-        //////////////////////continue.also{ finish item_article_preview.xml}
     }
 
     override fun getItemCount(): Int {
