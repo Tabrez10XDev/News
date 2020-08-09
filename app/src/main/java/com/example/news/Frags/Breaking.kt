@@ -3,11 +3,8 @@ package com.example.news.Frags
 import android.os.Bundle
 import android.util.Log.d
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.news.MainActivity
 
