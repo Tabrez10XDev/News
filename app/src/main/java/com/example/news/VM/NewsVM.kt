@@ -3,6 +3,7 @@ package com.example.news.VM
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.news.Room.Article
 import com.example.news.Room.NewsRepository
 import com.example.news.models.NewsResponse
 import com.example.news.util.Resource
@@ -53,5 +54,15 @@ val breakingNews : MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
         }
         return Resource.Error(response.message())
 
+    }
+
+    fun saveArticle(article: Article) = viewModelScope.launch {
+        newsRepository.upsert(article)
+    }
+
+    fun getSavedNews()= newsRepository.getSavedNews()
+
+    fun deleteArticle(article: Article) = viewModelScope.launch {
+        newsRepository.deleteArticle(article)
     }
 }

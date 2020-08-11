@@ -34,6 +34,10 @@ d("Lj","help")
         }
 
 
+        fab.setOnClickListener{
+            viewModel.saveArticle(article)
+            Toast.makeText(activity,"Article Saved",Toast.LENGTH_SHORT).show()
+        }
 
     }
 }
