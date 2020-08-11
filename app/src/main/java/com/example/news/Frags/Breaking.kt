@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.util.Log.d
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.news.MainActivity
 
@@ -22,6 +24,13 @@ class Breaking : Fragment(R.layout.fragment_breaking) {
         viewModel = (activity as MainActivity).viewModel
 
         setupRecyclerView()
+
+        newsAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("article",it)
+            }
+            findNavController().navigate(R.id.action_breaking_to_articleFragment,bundle)
+        }
         viewModel.breakingNews.observe(viewLifecycleOwner, Observer { response ->
             when (response){
             is Resource.Succes ->{
@@ -36,6 +45,7 @@ class Breaking : Fragment(R.layout.fragment_breaking) {
                     hideProgressBar()
                     response.message?.let{
                         d("Lj-Breaking","Error: $it")
+                        Toast.makeText(activity,"Error $it",Toast.LENGTH_SHORT).show()
                     }
                 }
                 is Resource.Loading->{

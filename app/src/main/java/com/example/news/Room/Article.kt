@@ -3,6 +3,7 @@ package com.example.news.Room
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.news.models.Source
+import java.io.Serializable
 
 @Entity(
     tableName = "Articles"
@@ -18,4 +19,4 @@ data class Article(
     val title: String,
     val url: String,
     val urlToImage: String
-)
+): Serializable
