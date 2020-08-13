@@ -7,8 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.webkit.WebViewClient
 import android.widget.Toast
-import androidx.navigation.fragment.navArgs
-import com.example.news.MainActivity
+import com.example.news.app.MainActivity
 
 import com.example.news.R
 import com.example.news.VM.NewsVM
